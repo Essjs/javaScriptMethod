@@ -1,0 +1,11 @@
+/**
+ * 遮蔽字符串
+ * @param {*-需要进行遮蔽的字符串} str
+ * @param {Number-从左边数第几位开始}  start
+ * @param {Number-从右边数第几位结束} end
+ * @param {string-遮蔽符号} mask
+ * 示例 mask('123456789',2,4) // 12****7890
+ */
+const mask = (str, start = 0, end = 4, mask = '*') => {
+    return ('' + str).slice(0, start) + ('' + str).slice(start, -end).replace(/./g, mask) + ('' + str).slice(-end);
+}
