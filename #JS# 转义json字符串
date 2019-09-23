@@ -1,0 +1,10 @@
+//str json格式串
+function JsonParse(str) {
+    console.log(typeof JSON.parse(str));
+    try {
+        if (typeof JSON.parse(str) == 'object') {
+            return JSON.parse(str);
+        }
+    } catch (e) {}
+    return str;
+};
